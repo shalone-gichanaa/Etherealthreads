@@ -5,8 +5,9 @@ body{
     padding: 0;
     
 }
+/* navigation bar */
 nav{
-    background-color: #235e25;
+    background-color: #435e23;
     padding: 5px;
     text-align: center;
 }
@@ -24,4 +25,40 @@ nav ul li a{
     color: rgb(240, 117, 9);
     font-size: 25px;
     font-weight: bold;
+}
+/* hero section */
+.hero{
+    background-image: url('../assets/hero.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 200px 20px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+
+}
+.hero h1{
+    font-size: 50px;
+    margin: 0 0 20px;
+    /* font-style: italic; */
+    text-decoration: underline;
+    
+
+}
+.hero p{
+    font-size: 25px;
+    margin-bottom: 40px;
+    font-style: italic;
+    
+
+}
+.hero a{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #435e23;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
 }
