@@ -29,7 +29,6 @@ nav ul li a{
 }
 /* hero section */
 .hero{
-    background-image: url('../assets/hero.avif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
