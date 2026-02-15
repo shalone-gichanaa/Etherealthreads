@@ -98,9 +98,8 @@ if (form) {
     });
 }
 
-// ===============================
-// Filter buttons functionality
-// ===============================
+
+// filter products by category on product.html
 const filterButtons = document.querySelectorAll(".filter-btn");
 
 filterButtons.forEach(button => {
