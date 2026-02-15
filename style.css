@@ -179,8 +179,9 @@ button:hover{
     background-color: #435e23;
     color: rgb(236, 124, 33);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
+    margin-bottom: 80px;
 }
 .product-item-clothing img{
     max-width: 100%;
@@ -203,6 +204,7 @@ button:hover{
     padding: 20px;
     border-radius: 5px;
     text-align: center;
+    margin-bottom: 80px;
 }
 .product-item-accessories img{
     max-width: 100%;
