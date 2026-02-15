@@ -59,4 +59,4 @@ This web application is built with **HTML, CSS, and JavaScript**. Users can **br
 ## Author
 **Shalone Gichana**  
 - Email: [gichanashalone@gmail.com](mailto:gichanashalone@gmail.com)  
-- GitHub: [https://github.com/shalone-gichanaa](https://github.com/shalone-gichanaa)  
+- GitHub: [https://github.com/shalone-gichanaa](https://github.com/shalone-gichanaa/Etherealthreads)
