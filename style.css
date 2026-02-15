@@ -123,6 +123,17 @@ footer{
     color: rgb(67, 101, 6);
     
 }
+.product-item{
+    background-color: #435e23;
+    color: rgb(236, 124, 33);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /* filter buttons */
 .filter{
@@ -178,6 +189,41 @@ button:hover{
     color: #000;
     font-weight: bold;
 }
+.product-item .price{
+    color: rgb(67, 101, 6);
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.product-item .category{
+    color: rgb(67, 101, 6);
+    font-size: 14px;
+    margin-top: 5px;
+    font-style: italic;
+}
+.product-item .delete-btn{
+    background-color: #54081a;
+    color: rgb(236, 124, 33);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.add-product{
+    background-color: #c3f1c3;
+    padding: 50px 20px;
+    text-align: center;
+    color: rgb(67, 101, 6);
+}
+.add-product h2{
+    font-size: 40px;
+    margin-top: 0;
+    font-style: italic; 
+    text-decoration: underline;
+    text-shadow: 0px 10px 10px rgb(89, 135, 9);
+}
+
 /* add product form */
 .add-product form{
     display: inline-block;
