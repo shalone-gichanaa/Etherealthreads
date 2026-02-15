@@ -103,3 +103,101 @@ footer{
     color: rgb(67, 101, 6);
     
 }
+.products{
+    background-color: #c3f1c3;
+    padding: 50px 20px;
+    text-align: center;
+    color: rgb(67, 101, 6);
+}
+.products h2{
+    font-size: 40px;
+    margin-top: 0;
+    font-style: italic; 
+    text-decoration: underline;
+    text-shadow: 0px 10px 10px rgb(89, 135, 9);
+}
+.products p{
+    font-size: 25px;
+    margin-bottom: 40px;
+    /* font-style: italic; */
+    color: rgb(67, 101, 6);
+    
+}
+.filter{
+    background-color: #c3f1c3;
+    padding: 50px 20px;
+    text-align: center;
+    color: rgb(67, 101, 6);
+}
+button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #435e23;
+    color: rgb(236, 124, 33);
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 2px solid #54081a;
+}
+button:hover{
+    background-color: #54081a;
+    color: rgb(236, 124, 33);
+    border: 2px solid #435e23;
+}
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.product-item{
+    background-color: #435e23;
+    color: rgb(236, 124, 33);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.product-item img{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.product-item h3{
+    font-size: 20px;
+    margin: 10px 0;
+}
+.product-item p{
+    font-size: 16px;
+    margin: 0;
+}
+.product-item-clothing{
+    background-color: #435e23;
+    color: rgb(236, 124, 33);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.product-item-clothing img{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+.product-item-clothing h3{
+    font-size: 20px;
+    margin: 10px 0;
+}
+.product-item-clothing p{
+    font-size: 16px;
+    margin: 0;
+}
+.product-item-accessories{
+    background-color: #435e23;
+    color: rgb(236, 124, 33);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.product-item-accessories img{
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
