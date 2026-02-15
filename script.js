@@ -1,22 +1,21 @@
-// ===============================
+
 // Get products from localStorage
-// ===============================
 function getProducts() {
     // Returns an array of products or an empty array if none exist
     return JSON.parse(localStorage.getItem("products")) || [];
 }
 
-// ===============================
+
 // Save products to localStorage
-// ===============================
+
 function saveProducts(products) {
     // Convert the products array to a JSON string and store it
     localStorage.setItem("products", JSON.stringify(products));
 }
 
-// ===============================
+
 // Display products on product.html
-// ===============================
+
 function displayProducts(category = "all") {
     const productList = document.getElementById("product-list");
     if (!productList) return; // Stop if not on product page
@@ -35,7 +34,7 @@ function displayProducts(category = "all") {
         return;
     }
 
-    // Create product cards dynamically
+    // Create product cards for each product and append to the product list
     filteredProducts.forEach((product, index) => {
         const productCard = document.createElement("div");
         productCard.classList.add("product-item");
@@ -52,9 +51,7 @@ function displayProducts(category = "all") {
     });
 }
 
-// ===============================
-// Add new product from add.html
-// ===============================
+// Add new product functionality on add.html
 const form = document.getElementById("addProductForm");
 
 if (form) {
@@ -67,7 +64,7 @@ if (form) {
         const price = document.getElementById("productPrice").value;
         const imageInput = document.getElementById("productImage");
 
-        // Check if all fields are filled
+        // Check if all fields are filled and an image is selected
         if (!name || !category || !price || !imageInput.files[0]) {
             alert("Please fill in all fields.");
             return;
@@ -75,7 +72,7 @@ if (form) {
 
         const reader = new FileReader();
 
-        // Convert image to Base64 and store it
+        // Convert the selected image to a data URL for storage
         reader.onload = function () {
             const imageData = reader.result;
 
@@ -109,9 +106,8 @@ filterButtons.forEach(button => {
     });
 });
 
-// ===============================
-// Delete product functionality
-// ===============================
+
+// delete product functionality on product.html
 document.addEventListener("click", function (e) {
     if (e.target.classList.contains("delete-btn")) {
         const index = e.target.getAttribute("data-index");
@@ -123,7 +119,6 @@ document.addEventListener("click", function (e) {
     }
 });
 
-// ===============================
-// Initial display of all products
-// ===============================
+
+// call displayProducts on page load to show existing products
 displayProducts();
