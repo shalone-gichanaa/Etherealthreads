@@ -1,6 +1,6 @@
 # 🌿 Ethereal Threads
 
-![Website](https://img.shields.io/badge/Website-Online-green) ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26-orange) ![CSS3](https://img.shields.io/badge/CSS3-%231572B6-blue) ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E-yellow)
+![Website]
 
 
 
