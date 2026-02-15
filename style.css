@@ -125,9 +125,10 @@ footer{
 }
 .filter{
     background-color: #c3f1c3;
-    padding: 50px 20px;
+    padding: 10px 20px;
     text-align: center;
     color: rgb(67, 101, 6);
+    margin-bottom: 20px;
 }
 button{
     display: inline-block;
@@ -143,7 +144,9 @@ button:hover{
     background-color: #54081a;
     color: rgb(236, 124, 33);
     border: 2px solid #435e23;
+    cursor: pointer;
 }
+
 .product-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -153,13 +156,14 @@ button:hover{
     background-color: #435e23;
     color: rgb(236, 124, 33);
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     text-align: center;
 }
 .product-item img{
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
+    
 }
 .product-item h3{
     font-size: 20px;
@@ -168,6 +172,8 @@ button:hover{
 .product-item p{
     font-size: 16px;
     margin: 0;
+    color: #000;
+    font-weight: bold;
 }
 .product-item-clothing{
     background-color: #435e23;
@@ -188,6 +194,8 @@ button:hover{
 .product-item-clothing p{
     font-size: 16px;
     margin: 0;
+    color: #000;
+    font-weight: bold;
 }
 .product-item-accessories{
     background-color: #435e23;
@@ -208,5 +216,8 @@ button:hover{
 .product-item-accessories p{
     font-size: 16px;
     margin: 0;
+    color: #000;
+    font-weight: bold;
 }
+
 
