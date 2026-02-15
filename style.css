@@ -282,4 +282,5 @@ button:hover{
     margin-bottom: 20px;
     color: rgb(67, 101, 6);
     text-decoration: underline;
+    font-style: italic;
 }
