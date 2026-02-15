@@ -3,68 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ethereal Threads</title>
-      <!-- linking css file    -->
+    <title>Products - Ethereal Threads</title>
     <link rel="stylesheet" href="./style.css">
-
 </head>
 
 <body>
-    <!-- navigation bar    -->
-    <nav>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./product.html">Products</a></li>
-            <li><a href="./about.html">About Us</a></li>
-            <li><a href="./add.html">Add Product</a></li>
-        </ul>
-    </nav>
 
-    <section class="products">
-        <h2>Our Products</h2>
-        <p>Explore our exclusive collection of unique and stylish clothing and accessories.</p>
+    <!-- Header -->
+    <header>
+        <h1>Ethereal Threads</h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./product.html">Products</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./add.html">Add Product</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <div class="filter">
-            <button class="btn active" onclick="filterProducts('all')">All</button>
-            <button class="btn" onclick="filterProducts('clothing')">Clothing</button>
-            <button class="btn" onclick="filterProducts('accessories')">Accessories</button>
-        </div>
+    <!-- Main Content -->
+    <main>
+        <section id="products">
+            <h2>Our Products</h2>
+            <p>Explore our exclusive thrift collection of boots and clothing.</p>
 
-        <div class="product-grid">
-            <div class="product-item-clothing">
-                <img src="./assets/vintage dress.jpg" alt="Vintage Dress">
-                <h3>Vintage Dress</h3>
-                <p>950ksh</p>
-            </div>
-            <div class="product-item-accessories">
-                <img src="./assets/boho necklace.jpg" alt="Boho Necklace">
-                <h3>Boho Necklace</h3>
-                <p>450ksh</p>
-            </div>
-            <div class="product-item-clothing">
-                <img src="./assets/retro jacket.jpg" alt="Retro Jacket">
-                <h3>Retro Jacket</h3>
-                <p>890ksh</p>
-            </div>
-            <div class="product-item-accessories">
-                <img src="./assets/statement earrings.jpg" alt="Statement Earrings">
-                <h3>Statement Earrings</h3>
-                <p>290ksh</p>
+            <!-- Filter Buttons -->
+            <div class="filter">
+                <button class="btn filter-btn" data-category="all">All</button>
+                <button class="btn filter-btn" data-category="clothing">Clothing</button>
+                <button class="btn filter-btn" data-category="accessories">Accessories</button>
             </div>
 
-            <div class="product-item-clothing">
-                <img src="./assets/bohemian skirt.jpg" alt="Bohemian Skirt">
-                <h3>Bohemian Skirt</h3>
-                <p>390ksh</p>
+            <!-- Dynamic Product Area -->
+            <div id="product-list" class="product-grid">
+                <!-- JavaScript will insert products here -->
             </div>
-    </section>
-    
-        <!-- footer section    -->
-        <footer>
-            <p>&copy; 2026 Ethereal Threads. All rights reserved.</p>
-        </footer>
 
-        <script src="./script.js"></script>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Ethereal Threads. All rights reserved.</p>
+    </footer>
+
+    <script src="./script.js"></script>
 
 </body>
 </html>
