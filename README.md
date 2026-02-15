@@ -1,6 +1,6 @@
 # 🌿 Ethereal Threads
 
-![Website]
+![Website](https://shalone-gichanaa.github.io/Etherealthreads/)
 
 
 
