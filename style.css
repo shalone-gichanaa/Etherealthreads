@@ -266,11 +266,12 @@ button:hover{
 }
 .contact{
     background-color: #c3f1c3;
-    padding: 50px 20px;
+    padding: 20px 20px;
     text-align: center;
     color: rgb(67, 101, 6);
+    margin-bottom: 50px;
 }
-.contact h2{
+.contact h2{ 
     font-size: 20px;
     margin-top: 0;
     font-style: italic; 
@@ -283,4 +284,5 @@ button:hover{
     color: rgb(67, 101, 6);
     text-decoration: underline;
     font-style: italic;
+    
 }
