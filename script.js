@@ -1,40 +1,47 @@
-
-// GET PRODUCTS FROM LOCAL STORAGE
-
+// ===============================
+// Get products from localStorage
+// ===============================
 function getProducts() {
+    // Returns an array of products or an empty array if none exist
     return JSON.parse(localStorage.getItem("products")) || [];
 }
 
-// SAVE PRODUCTS TO LOCAL STORAGE
-
+// ===============================
+// Save products to localStorage
+// ===============================
 function saveProducts(products) {
+    // Convert the products array to a JSON string and store it
     localStorage.setItem("products", JSON.stringify(products));
 }
 
-// DISPLAY PRODUCTS
-
+// ===============================
+// Display products on product.html
+// ===============================
 function displayProducts(category = "all") {
     const productList = document.getElementById("product-list");
-    if (!productList) return; // If not on product page, stop
+    if (!productList) return; // Stop if not on product page
 
     const products = getProducts();
+    productList.innerHTML = ""; // Clear previous content
 
-    productList.innerHTML = "";
-
-    const filteredProducts = category === "all"
-        ? products
-        : products.filter(product => product.category === category);
+    // Filter products if a category is selected
+    const filteredProducts =
+        category === "all"
+            ? products
+            : products.filter(product => product.category === category);
 
     if (filteredProducts.length === 0) {
         productList.innerHTML = "<p>No products available.</p>";
         return;
     }
 
+    // Create product cards dynamically
     filteredProducts.forEach((product, index) => {
         const productCard = document.createElement("div");
         productCard.classList.add("product-item");
 
         productCard.innerHTML = `
+            <img src="${product.image}" alt="${product.name}" class="product-image">
             <h3>${product.name}</h3>
             <p>Category: ${product.category}</p>
             <p>Price: ${product.price} Ksh</p>
@@ -45,76 +52,79 @@ function displayProducts(category = "all") {
     });
 }
 
-// ADD PRODUCT (ADD PAGE)
+// ===============================
+// Add new product from add.html
+// ===============================
 const form = document.getElementById("addProductForm");
 
 if (form) {
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
+        // Get input values
         const name = document.getElementById("productName").value.trim();
         const category = document.getElementById("productCategory").value;
         const price = document.getElementById("productPrice").value;
-        const image = document.getElementById("productImage").value;
+        const imageInput = document.getElementById("productImage");
 
-        if (!name || !category || !price || !image[0]) {
+        // Check if all fields are filled
+        if (!name || !category || !price || !imageInput.files[0]) {
             alert("Please fill in all fields.");
             return;
         }
 
         const reader = new FileReader();
+
+        // Convert image to Base64 and store it
         reader.onload = function () {
             const imageData = reader.result;
 
+            const products = getProducts();
 
+            products.push({
+                name,
+                category,
+                price,
+                image: imageData
+            });
 
-        const products = getProducts();
+            saveProducts(products);
 
-        products.push({
-            name,
-            category,
-            price,
-            image: imageData
-        });
+            // Reset form after adding product
+            form.reset();
+        };
 
-        saveProducts(products);
-
-        alert("Product added successfully!");
-
-        form.reset();
+        reader.readAsDataURL(imageInput.files[0]); // Read the selected image
     });
+}
 
-    reader.readAsDataURL(image[0]);
-    });
-} 
-
-// FILTER BUTTONS
-
+// ===============================
+// Filter buttons functionality
+// ===============================
 const filterButtons = document.querySelectorAll(".filter-btn");
 
 filterButtons.forEach(button => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", function () {
         const category = button.getAttribute("data-category");
-        displayProducts(category);
+        displayProducts(category); // Display filtered products
     });
 });
 
 // ===============================
-// DELETE PRODUCT
+// Delete product functionality
 // ===============================
 document.addEventListener("click", function (e) {
     if (e.target.classList.contains("delete-btn")) {
         const index = e.target.getAttribute("data-index");
         const products = getProducts();
 
-        products.splice(index, 1);
-        saveProducts(products);
-
-        displayProducts();
+        products.splice(index, 1); // Remove product from array
+        saveProducts(products); // Update localStorage
+        displayProducts(); // Refresh product list
     }
 });
 
 // ===============================
-// INITIAL DISPLAY
+// Initial display of all products
 // ===============================
 displayProducts();

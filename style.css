@@ -82,7 +82,7 @@ footer{
     bottom: 0;
     width: 100%;
 }
-
+/* about and products and add section */
 .about{
     background-color: #c3f1c3;
     padding: 50px 20px;
@@ -123,6 +123,8 @@ footer{
     color: rgb(67, 101, 6);
     
 }
+
+/* filter buttons */
 .filter{
     background-color: #c3f1c3;
     padding: 10px 20px;
@@ -147,6 +149,7 @@ button:hover{
     cursor: pointer;
 }
 
+/* product grid */
 .product-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -175,65 +178,7 @@ button:hover{
     color: #000;
     font-weight: bold;
 }
-.product-item-clothing{
-    background-color: #435e23;
-    color: rgb(236, 124, 33);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    margin-bottom: 80px;
-}
-.product-item-clothing img{
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-.product-item-clothing h3{
-    font-size: 20px;
-    margin: 10px 0;
-}
-.product-item-clothing p{
-    font-size: 16px;
-    margin: 0;
-    color: #000;
-    font-weight: bold;
-}
-.product-item-accessories{
-    background-color: #435e23;
-    color: rgb(236, 124, 33);
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    margin-bottom: 80px;
-}
-.product-item-accessories img{
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-.product-item-accessories h3{
-    font-size: 20px;
-    margin: 10px 0;
-}
-.product-item-accessories p{
-    font-size: 16px;
-    margin: 0;
-    color: #000;
-    font-weight: bold;
-}
-.add-product{
-    background-color: #c3f1c3;
-    padding: 50px 20px;
-    text-align: center;
-    color: rgb(67, 101, 6);
-}
-.add-product h2{
-    font-size: 40px;
-    margin-top: 0;
-    font-style: italic; 
-    text-decoration: underline;
-    text-shadow: 0px 10px 10px rgb(89, 135, 9);
-}
+/* add product form */
 .add-product form{
     display: inline-block;
     text-align: left;
@@ -264,6 +209,7 @@ button:hover{
 .add-product button:hover{
     background-color: #435e23;
 }
+/* contact section  */
 .contact{
     background-color: #c3f1c3;
     padding: 20px 20px;
